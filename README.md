@@ -9,7 +9,7 @@
 ```sh
 git clone https://github.com/gakonst/dapptools-template
 cd dapptools-template
-make
+make # This installs the project's dependencies.
 make test
 ```
 
@@ -59,6 +59,17 @@ dapp testnet
 # get the printed account address from the testnet, and set it as ETH_FROM. Then:
 make deploy
 ```
+
+### Verifying on Etherscan
+
+After deploying your contract you can verify it on Etherscan using:
+
+```
+ETHERSCAN_API_KEY=<api-key> contract_address=<address> network_name=<mainnet|rinkeby|...> make verify
+```
+
+Check out the [dapp documentation](https://github.com/dapphub/dapptools/tree/master/src/dapp#dapp-verify-contract) to see how
+verifying contracts work with DappTools.
 
 ## Installing the toolkit
 
